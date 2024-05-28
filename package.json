@@ -1,0 +1,40 @@
+{
+  "name": "aaarrago",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/aaarrago.umd.cjs",
+  "module": "./dist/aaarrago.js",
+  "exports": {
+    ".": {
+      "import": "./dist/aaarrago.js",
+      "require": "./dist/aaarrago.umd.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "l": "vite",
+    "c": "npm run componentes; npm run estilos",
+    "componentes": "vite build",
+    "estilos": "sass src/estilos/aaarrago.scss:dist/aaarrago.css --style compressed"
+  },
+  "dependencies": {
+    "sass": "^1.77.2",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.8",
+    "vue-router": "^4.3.0"
+  },
+  "author": {
+    "name": "flkt",
+    "url": "https://flkt.mx/"
+  },
+  "keywords": [
+    "vue-library",
+    "sass-library"
+  ]
+}

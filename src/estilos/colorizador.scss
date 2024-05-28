@@ -1,0 +1,72 @@
+// es un tipo de normalizador de color
+// como las variables de color y el tema de color siempre es un tema
+// mejor mantener las cosas separadas
+// importante no agregar cosas que no se requieran editar despues por estilo
+
+body {
+  background-color: var(--fondo, #eee);
+  color: var(--color, #333);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+th,
+dt,
+summary {
+  color: var(--color-acento, #000);
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 0.25em solid var(--enfoque, #0000ff66);
+}
+
+input,
+textarea,
+fieldset {
+  background-color: var(--fondo, #eee);
+  border: 1px solid currentColor; 
+  color: var(--color, #333);
+}
+
+::-webkit-input-placeholder {
+  background-color: var(--entrada-muestra-fondo, #fff);
+  color: var(--entrada-muestra-color, #555);
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  background-color: var(--entrada-muestra-fondo, #fff);
+  color: var(--entrada-muestra-color, #555);
+  opacity: 1;
+}
+
+::placeholder {
+  background-color: var(--entrada-muestra-fondo, #fff);
+  color: var(--entrada-muestra-color, #555);
+  opacity: 1;
+}
+
+::-webkit-selection {
+  background-color: var(--seleccion-fondo, #0ff);
+  color: var(--seleccion-color, #333);
+}
+
+::-moz-selection {
+  background-color: var(--seleccion-fondo, #0ff);
+  color: var(--seleccion-color, #333);
+}
+
+::selection {
+  background-color: var(--seleccion-fondo, #0ff);
+  color: var(--seleccion-color, #333);
+}
